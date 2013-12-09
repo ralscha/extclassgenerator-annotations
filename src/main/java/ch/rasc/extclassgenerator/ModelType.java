@@ -69,7 +69,7 @@ public enum ModelType {
 		}
 	};
 
-	private String jsName;
+	private final String jsName;
 
 	private ModelType(String jsName) {
 		this.jsName = jsName;
