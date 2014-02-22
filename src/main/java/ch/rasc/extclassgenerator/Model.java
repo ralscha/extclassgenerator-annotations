@@ -135,5 +135,22 @@ public @interface Model {
 	 * 
 	 */
 	String messageProperty() default "";
+	
+	/**
+	 * If set add a writer property to the proxy.
+	 * 
+	 * <pre>
+	 *   proxy: {
+	 *     type: 'direct',
+	 *     writer: 'mywriter'
+	 *   }
+	 * </pre>
+	 * 
+	 * See <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Proxy-cfg-writer"
+	 * >Ext.data.proxy.Proxy#writer</a>
+	 * 
+	 */	
+	String writer() default "";
 
 }
