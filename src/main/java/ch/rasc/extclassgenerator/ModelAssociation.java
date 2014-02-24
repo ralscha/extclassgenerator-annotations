@@ -27,7 +27,7 @@ import java.lang.annotation.Target;
  * annotation is present on a field the generator creates an associations config
  * object in the model.
  */
-@Target({ ElementType.FIELD })
+@Target({ ElementType.FIELD, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
