@@ -27,7 +27,7 @@ import java.lang.annotation.Target;
  * does not have to be present on the field to be included in the generated JS
  * code. The generator takes all public readable fields into account.
  */
-@Target({ ElementType.FIELD, ElementType.METHOD })
+@Target({ ElementType.FIELD, ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented

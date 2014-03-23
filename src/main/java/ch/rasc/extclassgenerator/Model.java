@@ -52,15 +52,15 @@ public @interface Model {
 
 	/**
 	 * If true a reader config with root : 'records' will be added to the model
-	 * object. This configuration is needed when the STORE_READ method returns an
-	 * instance of {@link ExtDirectStoreResult}
-	 * 
+	 * object. This configuration is needed when the STORE_READ method returns
+	 * an instance of {@link ExtDirectStoreResult}
+	 *
 	 * <pre>
 	 * reader : {
 	 *   root : 'records'
 	 * }
 	 * </pre>
-	 * 
+	 *
 	 * Default value is false
 	 */
 	boolean paging() default false;
@@ -69,7 +69,7 @@ public @interface Model {
 	 * If set to true the pageParam, startParam and limitParam option of the
 	 * proxy will be set to undefined. This prevents the proxy of sending the
 	 * page, start and limit parameter to the server.
-	 * 
+	 *
 	 * <pre>
 	 *   proxy: {
 	 *     type: 'direct',
@@ -78,7 +78,7 @@ public @interface Model {
 	 *     limitParam: undefined,
 	 *   }
 	 * </pre>
-	 * 
+	 *
 	 * Default value is false
 	 */
 	boolean disablePagingParameters() default false;
@@ -89,8 +89,8 @@ public @interface Model {
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
 	 * >Ext.data.proxy.Direct#api</a>.
 	 * <p>
-	 * If only the readMethod is specified the generator will write the property <a
-	 * href=
+	 * If only the readMethod is specified the generator will write the property
+	 * <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-directFn"
 	 * >directFn</a> instead.
 	 */
@@ -122,35 +122,35 @@ public @interface Model {
 
 	/**
 	 * If set add to reader
-	 * 
+	 *
 	 * <pre>
 	 * reader : {
 	 *   messageProperty : 'your property name'
 	 * }
 	 * </pre>
-	 * 
+	 *
 	 * It is useful to add a customized message in case of error See <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-messageProperty"
 	 * >Ext.data.reader.Reader#messageProperty</a>
-	 * 
+	 *
 	 */
 	String messageProperty() default "";
-	
+
 	/**
 	 * If set add a writer property to the proxy.
-	 * 
+	 *
 	 * <pre>
 	 *   proxy: {
 	 *     type: 'direct',
 	 *     writer: 'mywriter'
 	 *   }
 	 * </pre>
-	 * 
+	 *
 	 * See <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Proxy-cfg-writer"
 	 * >Ext.data.proxy.Proxy#writer</a>
-	 * 
-	 */	
+	 *
+	 */
 	String writer() default "";
 
 }

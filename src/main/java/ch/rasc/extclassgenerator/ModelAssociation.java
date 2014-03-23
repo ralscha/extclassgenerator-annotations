@@ -27,7 +27,7 @@ import java.lang.annotation.Target;
  * annotation is present on a field the generator creates an associations config
  * object in the model.
  */
-@Target({ ElementType.FIELD, ElementType.METHOD })
+@Target({ ElementType.FIELD, ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
@@ -41,6 +41,12 @@ public @interface ModelAssociation {
 	 * >type</a> config property.
 	 */
 	ModelAssociationType value();
+
+	/**
+	 * Name of the property. Must be present when annotation is located on a
+	 * type. Has to correspond with a {@link ModelField#value()} entry.
+	 */
+	String propertyName() default "";
 
 	/**
 	 * The class of the model that is being associated with.
@@ -130,11 +136,11 @@ public @interface ModelAssociation {
 	 * Sets the private config field instanceName of
 	 * Ext.data.association.HasOne, Ext.data.association.HasMany or
 	 * Ext.data.association.BelongsTo
-	 * 
+	 *
 	 * Setting this property fixes a problem in Ext JS when there are two
 	 * associations that use the same class type (Ext JS only sets one
 	 * association correctly).
-	 * 
+	 *
 	 * Warning: instanceName is a private config field in Ext JS and it can
 	 * change anytime.
 	 */
