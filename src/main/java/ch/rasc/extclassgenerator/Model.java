@@ -51,24 +51,26 @@ public @interface Model {
 	String idProperty() default "id";
 
 	/**
-	 * If true a reader config with root : 'records' will be added to the model
-	 * object. This configuration is needed when the STORE_READ method returns
-	 * an instance of {@link ExtDirectStoreResult}
+	 * If true a reader config with root : 'records' (Ext JS 4) or rootProperty
+	 * : 'records' (Sencha Touch 2 and Ext JS 5) will be added to the model
+	 * object.
 	 *
 	 * <pre>
 	 * reader : {
-	 *   root : 'records'
+	 *   rootProperty : 'records'
 	 * }
 	 * </pre>
 	 *
-	 * Default value is false
+	 * Default value is false. To set a specific value to the root property use
+	 * {@link #rootProperty()}
 	 */
 	boolean paging() default false;
 
 	/**
 	 * If set to true the pageParam, startParam and limitParam option of the
-	 * proxy will be set to undefined. This prevents the proxy of sending the
-	 * page, start and limit parameter to the server.
+	 * proxy will be set to undefined (Ext JS 4), false (Sencha Touch 2) or ''
+	 * (Ext JS 5). This prevents the proxy of sending the page, start and limit
+	 * parameter to the server.
 	 *
 	 * <pre>
 	 *   proxy: {
@@ -152,5 +154,59 @@ public @interface Model {
 	 *
 	 */
 	String writer() default "";
+
+	/**
+	 * If set add to reader
+	 *
+	 * <pre>
+	 * reader : {
+	 *   successProperty : 'success'
+	 * }
+	 * </pre>
+	 * 
+	 * See <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-successProperty"
+	 * >Ext.data.reader.Reader#successProperty</a>
+	 * <p>
+	 * If not present default value 'success' is used.
+	 */
+	String successProperty() default "";
+
+	/**
+	 * If set add to reader
+	 *
+	 * <pre>
+	 * reader : {
+	 *   totalProperty : 'total'
+	 * }
+	 * </pre>
+	 * 
+	 * See <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-totalProperty"
+	 * >Ext.data.reader.Reader#totalProperty</a>
+	 * <p>
+	 * If not present default value 'total' is used.
+	 */
+	String totalProperty() default "";
+
+	/**
+	 * If set a reader config with root : 'rootProperty' (Ext JS 4) or
+	 * rootProperty : 'rootProperty' (Sencha Touch 2 and Ext JS 5) will be added
+	 * to the model object.
+	 *
+	 * <pre>
+	 * reader : {
+	 *   rootProperty : 'rootProperty'
+	 * }
+	 * </pre>
+	 * 
+	 * If {@link #paging()} and {@link #rootProperty()} are present
+	 * {@link #rootProperty()} has precedence.
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-root"
+	 * >Ext.data.reader.Reader#root</a>
+	 */
+	String rootProperty() default "";
 
 }
