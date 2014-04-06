@@ -46,10 +46,22 @@ public @interface ModelField {
 	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-type"
 	 * >type</a>' in JS.
 	 * <p>
-	 * If not present the library tries to figure out the type with
-	 * {@link ModelType}.
+	 * If not present the library tries to figure out the type.
 	 */
 	ModelType type() default ModelType.AUTO;
+
+	/**
+	 * Type of the field. Property '<a
+	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-type"
+	 * >type</a>' in JS. This is used for the new Ext JS 5 Custom Field Types
+	 * feature.
+	 * <p>
+	 * If not present the library tries to figure out the type.
+	 * <p>
+	 * If {@link #type()} and {@link #customType()} are present
+	 * {@link #customType()} has precedence.
+	 */
+	String customType() default "";
 
 	/**
 	 * The default value. Property '<a href=
