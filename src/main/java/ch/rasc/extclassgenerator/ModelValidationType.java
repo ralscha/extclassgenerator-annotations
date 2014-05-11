@@ -32,7 +32,7 @@ public enum ModelValidationType {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			return (parameters != null) && (parameters.length == 2) && parameterExists(parameters, "integer")
+			return parameters != null && parameters.length == 2 && parameterExists(parameters, "integer")
 					&& parameterExists(parameters, "fraction") && parameters[0].value().matches("\\d+")
 					&& parameters[1].value().matches("\\d+");
 		}
@@ -47,7 +47,7 @@ public enum ModelValidationType {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			return (parameters != null) && (parameters.length == 1) && parameters[0].name().equals("matcher")
+			return parameters != null && parameters.length == 1 && parameters[0].name().equals("matcher")
 					&& !parameters[0].value().trim().isEmpty();
 		}
 	},
@@ -61,21 +61,21 @@ public enum ModelValidationType {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			return (parameters != null) && (parameters.length == 1) && parameters[0].name().equals("list");
+			return parameters != null && parameters.length == 1 && parameters[0].name().equals("list");
 		}
 	},
 	EXCLUSION(true) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			return (parameters != null) && (parameters.length == 1) && parameters[0].name().equals("list");
+			return parameters != null && parameters.length == 1 && parameters[0].name().equals("list");
 		}
 	},
 	LENGTH(true) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			if ((parameters != null) && (parameters.length == 1 || parameters.length == 2)
+			if (parameters != null && (parameters.length == 1 || parameters.length == 2)
 					&& (parameterExists(parameters, "min") || parameterExists(parameters, "max"))) {
 
 				if (parameters.length == 1) {
@@ -109,7 +109,7 @@ public enum ModelValidationType {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			if ((parameters != null) && (parameters.length == 1 || parameters.length == 2)
+			if (parameters != null && (parameters.length == 1 || parameters.length == 2)
 					&& (parameterExists(parameters, "min") || parameterExists(parameters, "max"))) {
 
 				if (parameters.length == 1) {

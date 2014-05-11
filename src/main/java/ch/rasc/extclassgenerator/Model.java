@@ -31,8 +31,7 @@ import java.lang.annotation.Target;
 @Documented
 public @interface Model {
 	/**
-	 * "Classname" of the model. See <a
-	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model"
+	 * "Classname" of the model. See <a href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model"
 	 * >Ext.data.Model</a>.
 	 * <p>
 	 * If not present full qualified name of the class is used.
@@ -40,20 +39,17 @@ public @interface Model {
 	String value() default "";
 
 	/**
-	 * Name of the id property. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model-cfg-idProperty"
+	 * Name of the id property. See <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model-cfg-idProperty"
 	 * >Ext.data.Model#idProperty</a>. This also sets the <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Server-cfg-idParam"
-	 * >idParam</a> property on the proxy.
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Server-cfg-idParam" >idParam</a> property on the proxy.
 	 * <p>
 	 * If not present default value of 'id' is used.
 	 */
 	String idProperty() default "id";
 
 	/**
-	 * If true a reader config with root : 'records' (Ext JS 4) or rootProperty
-	 * : 'records' (Sencha Touch 2 and Ext JS 5) will be added to the model
-	 * object.
+	 * If true a reader config with root : 'records' (Ext JS 4) or rootProperty : 'records' (Sencha Touch 2 and Ext JS
+	 * 5) will be added to the model object.
 	 *
 	 * <pre>
 	 * reader : {
@@ -61,16 +57,14 @@ public @interface Model {
 	 * }
 	 * </pre>
 	 *
-	 * Default value is false. To set a specific value to the root property use
-	 * {@link #rootProperty()}
+	 * Default value is false. To set a specific value to the root property use {@link #rootProperty()}
 	 */
 	boolean paging() default false;
 
 	/**
-	 * If set to true the pageParam, startParam and limitParam option of the
-	 * proxy will be set to undefined (Ext JS 4), false (Sencha Touch 2) or ''
-	 * (Ext JS 5). This prevents the proxy of sending the page, start and limit
-	 * parameter to the server.
+	 * If set to true the pageParam, startParam and limitParam option of the proxy will be set to undefined (Ext JS 4),
+	 * false (Sencha Touch 2) or '' (Ext JS 5). This prevents the proxy of sending the page, start and limit parameter
+	 * to the server.
 	 *
 	 * <pre>
 	 *   proxy: {
@@ -86,39 +80,29 @@ public @interface Model {
 	boolean disablePagingParameters() default false;
 
 	/**
-	 * Specifies the read method. This is a ExtDirect reference in the form
-	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
-	 * >Ext.data.proxy.Direct#api</a>.
+	 * Specifies the read method. This is a ExtDirect reference in the form action.methodName. See <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api" >Ext.data.proxy.Direct#api</a>.
 	 * <p>
-	 * If only the readMethod is specified the generator will write the property
-	 * <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-directFn"
-	 * >directFn</a> instead.
+	 * If only the readMethod is specified the generator will write the property <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-directFn" >directFn</a> instead.
 	 */
 	String readMethod() default "";
 
 	/**
-	 * Specifies the create method. This is a ExtDirect reference in the form
-	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
-	 * >Ext.data.proxy.Direct#api</a>.
+	 * Specifies the create method. This is a ExtDirect reference in the form action.methodName. See <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api" >Ext.data.proxy.Direct#api</a>.
 	 */
 	String createMethod() default "";
 
 	/**
-	 * Specifies the update method. This is a ExtDirect reference in the form
-	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
-	 * >Ext.data.proxy.Direct#api</a>.
+	 * Specifies the update method. This is a ExtDirect reference in the form action.methodName. See <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api" >Ext.data.proxy.Direct#api</a>.
 	 */
 	String updateMethod() default "";
 
 	/**
-	 * Specifies the destroy method. This is a ExtDirect reference in the form
-	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
-	 * >Ext.data.proxy.Direct#api</a>.
+	 * Specifies the destroy method. This is a ExtDirect reference in the form action.methodName. See <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api" >Ext.data.proxy.Direct#api</a>.
 	 */
 	String destroyMethod() default "";
 
@@ -148,8 +132,7 @@ public @interface Model {
 	 *   }
 	 * </pre>
 	 *
-	 * See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Proxy-cfg-writer"
+	 * See <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Proxy-cfg-writer"
 	 * >Ext.data.proxy.Proxy#writer</a>
 	 *
 	 */
@@ -164,8 +147,7 @@ public @interface Model {
 	 * }
 	 * </pre>
 	 * 
-	 * See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-successProperty"
+	 * See <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-successProperty"
 	 * >Ext.data.reader.Reader#successProperty</a>
 	 * <p>
 	 * If not present default value 'success' is used.
@@ -181,8 +163,7 @@ public @interface Model {
 	 * }
 	 * </pre>
 	 * 
-	 * See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-totalProperty"
+	 * See <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-totalProperty"
 	 * >Ext.data.reader.Reader#totalProperty</a>
 	 * <p>
 	 * If not present default value 'total' is used.
@@ -190,9 +171,8 @@ public @interface Model {
 	String totalProperty() default "";
 
 	/**
-	 * If set a reader config with root : 'rootProperty' (Ext JS 4) or
-	 * rootProperty : 'rootProperty' (Sencha Touch 2 and Ext JS 5) will be added
-	 * to the model object.
+	 * If set a reader config with root : 'rootProperty' (Ext JS 4) or rootProperty : 'rootProperty' (Sencha Touch 2 and
+	 * Ext JS 5) will be added to the model object.
 	 *
 	 * <pre>
 	 * reader : {
@@ -200,11 +180,9 @@ public @interface Model {
 	 * }
 	 * </pre>
 	 * 
-	 * If {@link #paging()} and {@link #rootProperty()} are present
-	 * {@link #rootProperty()} has precedence.
+	 * If {@link #paging()} and {@link #rootProperty()} are present {@link #rootProperty()} has precedence.
 	 * <p>
-	 * See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-root"
+	 * See <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-root"
 	 * >Ext.data.reader.Reader#root</a>
 	 */
 	String rootProperty() default "";
