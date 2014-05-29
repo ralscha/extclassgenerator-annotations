@@ -60,15 +60,23 @@ public enum ModelValidationType {
 	INCLUSION(true) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
-			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			return parameters != null && parameters.length == 1 && parameters[0].name().equals("list");
+			if (modelValidationAnnotation.exclusionOrInclusionList().length > 0) {
+				return true;
+			} else {
+				ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
+				return parameters != null && parameters.length == 1 && parameters[0].name().equals("list");
+			}
 		}
 	},
 	EXCLUSION(true) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
-			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			return parameters != null && parameters.length == 1 && parameters[0].name().equals("list");
+			if (modelValidationAnnotation.exclusionOrInclusionList().length > 0) {
+				return true;
+			} else {
+				ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
+				return parameters != null && parameters.length == 1 && parameters[0].name().equals("list");
+			}
 		}
 	},
 	LENGTH(true) {
