@@ -40,5 +40,14 @@ public @interface ModelValidation {
 	ModelValidationType value();
 
 	ModelValidationParameter[] parameters() default {};
+	
+	/**
+	 * inclusion or exclusion list, valid only for
+	 * {@link ModelValidationType#Exclusion} or
+	 * {@link ModelValidationType#Inclusion}. Confer to <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.validations-method-exclusion"
+	 * >documentation</a>
+	 */
+	String[] exclusionOrInclusionList() default {};
 
 }
