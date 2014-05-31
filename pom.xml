@@ -156,6 +156,7 @@
 						<exclude>**/*.md</exclude>
 						<exclude>**/*.py</exclude>
 						<exclude>**/.gitignore</exclude>
+						<exclude>.travis.yml</exclude>
 					</excludes>
 					<strictCheck>true</strictCheck>
 				</configuration>
