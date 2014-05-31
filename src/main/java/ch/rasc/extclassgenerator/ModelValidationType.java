@@ -19,7 +19,8 @@ public enum ModelValidationType {
 	GENERIC(false) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
-			return parameterExists(modelValidationAnnotation.parameters(), "type");
+			return parameterExists(modelValidationAnnotation.parameters(),
+					"type");
 		}
 	},
 	CREDITCARDNUMBER(false) {
@@ -31,9 +32,12 @@ public enum ModelValidationType {
 	DIGITS(false) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
-			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			return parameters != null && parameters.length == 2 && parameterExists(parameters, "integer")
-					&& parameterExists(parameters, "fraction") && parameters[0].value().matches("\\d+")
+			ModelValidationParameter[] parameters = modelValidationAnnotation
+					.parameters();
+			return parameters != null && parameters.length == 2
+					&& parameterExists(parameters, "integer")
+					&& parameterExists(parameters, "fraction")
+					&& parameters[0].value().matches("\\d+")
 					&& parameters[1].value().matches("\\d+");
 		}
 	},
@@ -46,8 +50,10 @@ public enum ModelValidationType {
 	FORMAT(true) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
-			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			return parameters != null && parameters.length == 1 && parameters[0].name().equals("matcher")
+			ModelValidationParameter[] parameters = modelValidationAnnotation
+					.parameters();
+			return parameters != null && parameters.length == 1
+					&& parameters[0].name().equals("matcher")
 					&& !parameters[0].value().trim().isEmpty();
 		}
 	},
@@ -62,9 +68,12 @@ public enum ModelValidationType {
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			if (modelValidationAnnotation.exclusionOrInclusionList().length > 0) {
 				return true;
-			} else {
-				ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-				return parameters != null && parameters.length == 1 && parameters[0].name().equals("list");
+			}
+			else {
+				ModelValidationParameter[] parameters = modelValidationAnnotation
+						.parameters();
+				return parameters != null && parameters.length == 1
+						&& parameters[0].name().equals("list");
 			}
 		}
 	},
@@ -73,24 +82,31 @@ public enum ModelValidationType {
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			if (modelValidationAnnotation.exclusionOrInclusionList().length > 0) {
 				return true;
-			} else {
-				ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-				return parameters != null && parameters.length == 1 && parameters[0].name().equals("list");
+			}
+			else {
+				ModelValidationParameter[] parameters = modelValidationAnnotation
+						.parameters();
+				return parameters != null && parameters.length == 1
+						&& parameters[0].name().equals("list");
 			}
 		}
 	},
 	LENGTH(true) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
-			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			if (parameters != null && (parameters.length == 1 || parameters.length == 2)
-					&& (parameterExists(parameters, "min") || parameterExists(parameters, "max"))) {
+			ModelValidationParameter[] parameters = modelValidationAnnotation
+					.parameters();
+			if (parameters != null
+					&& (parameters.length == 1 || parameters.length == 2)
+					&& (parameterExists(parameters, "min") || parameterExists(
+							parameters, "max"))) {
 
 				if (parameters.length == 1) {
 					return parameters[0].value().matches("\\d+");
 				}
 
-				return parameters[0].value().matches("\\d+") && parameters[1].value().matches("\\d+");
+				return parameters[0].value().matches("\\d+")
+						&& parameters[1].value().matches("\\d+");
 			}
 			return false;
 		}
@@ -116,9 +132,12 @@ public enum ModelValidationType {
 	RANGE(false) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
-			ModelValidationParameter[] parameters = modelValidationAnnotation.parameters();
-			if (parameters != null && (parameters.length == 1 || parameters.length == 2)
-					&& (parameterExists(parameters, "min") || parameterExists(parameters, "max"))) {
+			ModelValidationParameter[] parameters = modelValidationAnnotation
+					.parameters();
+			if (parameters != null
+					&& (parameters.length == 1 || parameters.length == 2)
+					&& (parameterExists(parameters, "min") || parameterExists(
+							parameters, "max"))) {
 
 				if (parameters.length == 1) {
 					return parameters[0].value().matches("\\d+(\\.\\d+)?");
@@ -143,7 +162,8 @@ public enum ModelValidationType {
 
 	public abstract boolean isValid(ModelValidation modelValidationAnnotation);
 
-	private static boolean parameterExists(ModelValidationParameter[] parameters, String parameterName) {
+	private static boolean parameterExists(
+			ModelValidationParameter[] parameters, String parameterName) {
 		for (ModelValidationParameter parameter : parameters) {
 			if (parameterName.equals(parameter.name())) {
 				return true;

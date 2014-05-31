@@ -36,16 +36,19 @@ public enum ModelType {
 	INTEGER("int") {
 		@Override
 		public boolean supports(Class<?> type) {
-			return type.equals(Byte.class) || type.equals(Short.class) || type.equals(Integer.class)
-					|| type.equals(Long.class) || type.equals(BigInteger.class) || type.equals(Byte.TYPE)
-					|| type.equals(Short.TYPE) || type.equals(Integer.TYPE) || type.equals(Long.TYPE);
+			return type.equals(Byte.class) || type.equals(Short.class)
+					|| type.equals(Integer.class) || type.equals(Long.class)
+					|| type.equals(BigInteger.class) || type.equals(Byte.TYPE)
+					|| type.equals(Short.TYPE) || type.equals(Integer.TYPE)
+					|| type.equals(Long.TYPE);
 		}
 	},
 	FLOAT("float") {
 		@Override
 		public boolean supports(Class<?> type) {
-			return type.equals(Float.class) || type.equals(Double.class) || type.equals(BigDecimal.class)
-					|| type.equals(Float.TYPE) || type.equals(Double.TYPE);
+			return type.equals(Float.class) || type.equals(Double.class)
+					|| type.equals(BigDecimal.class) || type.equals(Float.TYPE)
+					|| type.equals(Double.TYPE);
 		}
 	},
 	STRING("string") {
@@ -57,9 +60,11 @@ public enum ModelType {
 	DATE("date") {
 		@Override
 		public boolean supports(Class<?> type) {
-			return type.equals(Date.class) || type.equals(java.sql.Date.class) || type.equals(Timestamp.class)
+			return type.equals(Date.class) || type.equals(java.sql.Date.class)
+					|| type.equals(Timestamp.class)
 					|| type.getName().equals("org.joda.time.DateTime")
-					|| type.getName().equals("org.joda.time.LocalDate") || Calendar.class.isAssignableFrom(type);
+					|| type.getName().equals("org.joda.time.LocalDate")
+					|| Calendar.class.isAssignableFrom(type);
 		}
 	},
 	BOOLEAN("boolean") {

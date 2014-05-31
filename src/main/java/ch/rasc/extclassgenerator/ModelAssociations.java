@@ -22,7 +22,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Container annotation that aggregates several {@link ModelAssociation} annotations.
+ * Container annotation that aggregates several {@link ModelAssociation}
+ * annotations.
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
