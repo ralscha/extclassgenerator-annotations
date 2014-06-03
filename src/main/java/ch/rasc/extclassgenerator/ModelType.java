@@ -64,6 +64,7 @@ public enum ModelType {
 					|| type.equals(Timestamp.class)
 					|| type.getName().equals("org.joda.time.DateTime")
 					|| type.getName().equals("org.joda.time.LocalDate")
+					|| type.getName().equals("org.joda.time.ReadableDateTime")
 					|| Calendar.class.isAssignableFrom(type);
 		}
 	},
