@@ -19,8 +19,7 @@ public enum ModelValidationType {
 	GENERIC(false) {
 		@Override
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
-			return parameterExists(modelValidationAnnotation.parameters(),
-					"type");
+			return parameterExists(modelValidationAnnotation.parameters(), "type");
 		}
 	},
 	CREDITCARDNUMBER(false) {
@@ -98,8 +97,8 @@ public enum ModelValidationType {
 					.parameters();
 			if (parameters != null
 					&& (parameters.length == 1 || parameters.length == 2)
-					&& (parameterExists(parameters, "min") || parameterExists(
-							parameters, "max"))) {
+					&& (parameterExists(parameters, "min") || parameterExists(parameters,
+							"max"))) {
 
 				if (parameters.length == 1) {
 					return parameters[0].value().matches("\\d+");
@@ -136,8 +135,8 @@ public enum ModelValidationType {
 					.parameters();
 			if (parameters != null
 					&& (parameters.length == 1 || parameters.length == 2)
-					&& (parameterExists(parameters, "min") || parameterExists(
-							parameters, "max"))) {
+					&& (parameterExists(parameters, "min") || parameterExists(parameters,
+							"max"))) {
 
 				if (parameters.length == 1) {
 					return parameters[0].value().matches("\\d+(\\.\\d+)?");
@@ -162,8 +161,8 @@ public enum ModelValidationType {
 
 	public abstract boolean isValid(ModelValidation modelValidationAnnotation);
 
-	private static boolean parameterExists(
-			ModelValidationParameter[] parameters, String parameterName) {
+	private static boolean parameterExists(ModelValidationParameter[] parameters,
+			String parameterName) {
 		for (ModelValidationParameter parameter : parameters) {
 			if (parameterName.equals(parameter.name())) {
 				return true;

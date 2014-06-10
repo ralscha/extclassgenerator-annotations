@@ -32,8 +32,8 @@ import java.lang.annotation.Target;
 public @interface ModelValidation {
 
 	/**
-	 * Name of the property. Must be present when annotation is located on a
-	 * type. Has to correspond with a {@link ModelField#value()} entry.
+	 * Name of the property. Must be present when annotation is located on a type. Has to
+	 * correspond with a {@link ModelField#value()} entry.
 	 */
 	String propertyName() default "";
 
@@ -42,9 +42,8 @@ public @interface ModelValidation {
 	ModelValidationParameter[] parameters() default {};
 
 	/**
-	 * inclusion or exclusion list, valid only for
-	 * {@link ModelValidationType#Exclusion} or
-	 * {@link ModelValidationType#Inclusion}. Confer to <a href=
+	 * inclusion or exclusion list, valid only for {@link ModelValidationType#Exclusion}
+	 * or {@link ModelValidationType#Inclusion}. Confer to <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.validations-method-exclusion"
 	 * >documentation</a>
 	 */

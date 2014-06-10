@@ -32,8 +32,7 @@ import java.lang.annotation.Target;
 public @interface Model {
 	/**
 	 * "Classname" of the model. See <a
-	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model"
-	 * >Ext.data.Model</a>.
+	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model" >Ext.data.Model</a>.
 	 * <p>
 	 * If not present full qualified name of the class is used.
 	 */
@@ -51,9 +50,8 @@ public @interface Model {
 	String idProperty() default "id";
 
 	/**
-	 * If true a reader config with root : 'records' (Ext JS 4) or rootProperty
-	 * : 'records' (Sencha Touch 2 and Ext JS 5) will be added to the model
-	 * object.
+	 * If true a reader config with root : 'records' (Ext JS 4) or rootProperty :
+	 * 'records' (Sencha Touch 2 and Ext JS 5) will be added to the model object.
 	 *
 	 * <pre>
 	 * reader : {
@@ -67,10 +65,9 @@ public @interface Model {
 	boolean paging() default false;
 
 	/**
-	 * If set to true the pageParam, startParam and limitParam option of the
-	 * proxy will be set to undefined (Ext JS 4), false (Sencha Touch 2) or ''
-	 * (Ext JS 5). This prevents the proxy of sending the page, start and limit
-	 * parameter to the server.
+	 * If set to true the pageParam, startParam and limitParam option of the proxy will be
+	 * set to undefined (Ext JS 4), false (Sencha Touch 2) or '' (Ext JS 5). This prevents
+	 * the proxy of sending the page, start and limit parameter to the server.
 	 *
 	 * <pre>
 	 *   proxy: {
@@ -91,8 +88,7 @@ public @interface Model {
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
 	 * >Ext.data.proxy.Direct#api</a>.
 	 * <p>
-	 * If only the readMethod is specified the generator will write the property
-	 * <a href=
+	 * If only the readMethod is specified the generator will write the property <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-directFn"
 	 * >directFn</a> instead.
 	 */
@@ -190,9 +186,8 @@ public @interface Model {
 	String totalProperty() default "";
 
 	/**
-	 * If set a reader config with root : 'rootProperty' (Ext JS 4) or
-	 * rootProperty : 'rootProperty' (Sencha Touch 2 and Ext JS 5) will be added
-	 * to the model object.
+	 * If set a reader config with root : 'rootProperty' (Ext JS 4) or rootProperty :
+	 * 'rootProperty' (Sencha Touch 2 and Ext JS 5) will be added to the model object.
 	 *
 	 * <pre>
 	 * reader : {

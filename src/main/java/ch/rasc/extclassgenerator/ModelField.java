@@ -23,9 +23,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation that configures different aspects of a model field. The annotation
- * does not have to be present on the field to be included in the generated JS
- * code. The generator takes all public readable fields into account.
+ * Annotation that configures different aspects of a model field. The annotation does not
+ * have to be present on the field to be included in the generated JS code. The generator
+ * takes all public readable fields into account.
  */
 @Target({ ElementType.FIELD, ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
@@ -34,8 +34,8 @@ import java.lang.annotation.Target;
 public @interface ModelField {
 	/**
 	 * Name of the field. Property '<a
-	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-name"
-	 * >name</a>' in JS.
+	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-name" >name</a>'
+	 * in JS.
 	 * <p>
 	 * If not present the name of the field is used.
 	 */
@@ -43,8 +43,8 @@ public @interface ModelField {
 
 	/**
 	 * Type of the field. Property '<a
-	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-type"
-	 * >type</a>' in JS.
+	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-type" >type</a>'
+	 * in JS.
 	 * <p>
 	 * If not present the library tries to figure out the type.
 	 */
@@ -52,14 +52,13 @@ public @interface ModelField {
 
 	/**
 	 * Type of the field. Property '<a
-	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-type"
-	 * >type</a>' in JS. This is used for the new Ext JS 5 Custom Field Types
-	 * feature.
+	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-type" >type</a>'
+	 * in JS. This is used for the new Ext JS 5 Custom Field Types feature.
 	 * <p>
 	 * If not present the library tries to figure out the type.
 	 * <p>
-	 * If {@link #type()} and {@link #customType()} are present
-	 * {@link #customType()} has precedence.
+	 * If {@link #type()} and {@link #customType()} are present {@link #customType()} has
+	 * precedence.
 	 */
 	String customType() default "";
 
@@ -68,8 +67,8 @@ public @interface ModelField {
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-defaultValue"
 	 * >defaultValue</a>' in JS.
 	 * <p>
-	 * Can be set to {@link #DEFAULTVALUE_UNDEFINED} to set defaultValue to the
-	 * value undefined. This prevents defaulting a value.
+	 * Can be set to {@link #DEFAULTVALUE_UNDEFINED} to set defaultValue to the value
+	 * undefined. This prevents defaulting a value.
 	 */
 	String defaultValue() default "";
 
@@ -85,25 +84,22 @@ public @interface ModelField {
 	String dateFormat() default "";
 
 	/**
-	 * If true null value is used if value cannot be parsed. If false default
-	 * values are used (0 for integer and float, "" for string and false for
-	 * boolean).<br>
+	 * If true null value is used if value cannot be parsed. If false default values are
+	 * used (0 for integer and float, "" for string and false for boolean).<br>
 	 * Property '<a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-useNull"
-	 * >useNull</a>' in JS.<br>
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-useNull" >useNull</a>'
+	 * in JS.<br>
 	 * <p>
-	 * Only used if type of field is {@link ModelType#INTEGER},
-	 * {@link ModelType#FLOAT}, {@link ModelType#STRING} or
-	 * {@link ModelType#BOOLEAN}.
+	 * Only used if type of field is {@link ModelType#INTEGER}, {@link ModelType#FLOAT},
+	 * {@link ModelType#STRING} or {@link ModelType#BOOLEAN}.
 	 */
 	boolean useNull() default false;
 
 	/**
-	 * Typical use for a virtual field to extract field data from the model
-	 * object <br>
+	 * Typical use for a virtual field to extract field data from the model object <br>
 	 * Property '<a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-mapping"
-	 * >mapping</a>' in JS.
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-mapping" >mapping</a>'
+	 * in JS.
 	 * <p>
 	 */
 	String mapping() default "";
@@ -113,8 +109,8 @@ public @interface ModelField {
 	 * Ext.data.writer.Writer <br>
 	 * Typical use for a virtual field <br>
 	 * Property '<a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-persist"
-	 * >persist</a>' in JS.
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-persist" >persist</a>'
+	 * in JS.
 	 * <p>
 	 */
 	boolean persist() default true;
@@ -133,8 +129,7 @@ public @interface ModelField {
 	 * Constant for the value undefined. Can only be used for the property
 	 * {@link #defaultValue()}. According to the <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-defaultValue"
-	 * >documentation</a> setting defaultValue to undefined prevents defaulting
-	 * a value.
+	 * >documentation</a> setting defaultValue to undefined prevents defaulting a value.
 	 */
 	public final static String DEFAULTVALUE_UNDEFINED = "undefined";
 }
