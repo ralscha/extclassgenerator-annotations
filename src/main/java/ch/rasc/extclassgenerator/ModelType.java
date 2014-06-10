@@ -65,6 +65,10 @@ public enum ModelType {
 					|| type.getName().equals("org.joda.time.DateTime")
 					|| type.getName().equals("org.joda.time.LocalDate")
 					|| type.getName().equals("org.joda.time.ReadableDateTime")
+					|| type.getName().equals("java.time.LocalDate")
+					|| type.getName().equals("java.time.LocalDateTime")
+					|| type.getName().equals("java.time.ZonedDateTime")
+					|| type.getName().equals("java.time.OffsetDateTime")
 					|| Calendar.class.isAssignableFrom(type);
 		}
 	},
