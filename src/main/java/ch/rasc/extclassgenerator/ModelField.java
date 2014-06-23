@@ -105,13 +105,14 @@ public @interface ModelField {
 	String mapping() default "";
 
 	/**
-	 * Prevent the value of this field to be serialized or written with
+	 * If set to false prevents the value of this field to be serialized or written with
 	 * Ext.data.writer.Writer <br>
 	 * Typical use for a virtual field <br>
 	 * Property '<a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-persist" >persist</a>'
 	 * in JS.
 	 * <p>
+	 * Defaults to true
 	 */
 	boolean persist() default true;
 
@@ -124,6 +125,18 @@ public @interface ModelField {
 	 * <p>
 	 */
 	String convert() default "";
+
+	/**
+	 * This config defines a simple field calculation function. A calculate method only
+	 * has access to the record data and should return the value of the calculated field.
+	 * When provided in this way, the depends config is automatically determined by
+	 * parsing the calculate function.
+	 * 
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-calculate"
+	 * >Ext.data.Field.calculate</a>
+	 */
+	String calculate() default "";
 
 	/**
 	 * Constant for the value undefined. Can only be used for the property
