@@ -117,6 +117,18 @@ public @interface ModelField {
 	boolean persist() default true;
 
 	/**
+	 * A critical field is a field that must always be sent to the server even if it has
+	 * not changed.
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-critical"
+	 * >Ext.data.field.FieldView#critical</a>
+	 * <p>
+	 * Defaults to false
+	 */
+	boolean critical() default false;
+
+	/**
 	 * Function which coerces string values in raw data into the field's type <br>
 	 * Typical use for a virtual field <br>
 	 * Property '<a href=
