@@ -50,6 +50,20 @@ public @interface Model {
 	String idProperty() default "id";
 
 	/**
+	 * If specified, this is the name of the property that contains the entity "version".
+	 * The version property is used to manage a long-running transaction and allows the
+	 * detection of simultaneous modification.
+	 * 
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-versionProperty"
+	 * >Ext.data.Model#versionProperty</a>
+	 * 
+	 * <p>
+	 * Defaults to null
+	 */
+	String versionProperty() default "";
+
+	/**
 	 * If true a reader config with root : 'records' (Ext JS 4) or rootProperty :
 	 * 'records' (Sencha Touch 2 and Ext JS 5) will be added to the model object.
 	 *
