@@ -46,6 +46,9 @@ public @interface Model {
 	 * >idParam</a> property on the proxy.
 	 * <p>
 	 * If not present default value of 'id' is used.
+	 * <p>
+	 * This is an alternative to the {@link ModelId} annotation. The annotation takes
+	 * precedence if both are present.
 	 */
 	String idProperty() default "id";
 
@@ -53,7 +56,10 @@ public @interface Model {
 	 * If specified, this is the name of the property that contains the entity "version".
 	 * The version property is used to manage a long-running transaction and allows the
 	 * detection of simultaneous modification.
-	 * 
+	 * <p>
+	 * This is an alternative to the {@link ModelVersion} annotation. The annotation takes
+	 * precedence if both are present.
+	 * <p>
 	 * See <a href=
 	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-versionProperty"
 	 * >Ext.data.Model#versionProperty</a>
@@ -62,6 +68,23 @@ public @interface Model {
 	 * Defaults to null
 	 */
 	String versionProperty() default "";
+
+	/**
+	 * The name of the property a server will use to send back a client-generated id in a
+	 * create or update operation. This also sets the property clientIdProperty on the
+	 * writer config.
+	 * <p>
+	 * This is an alternative to the {@link ModelClientId} annotation. The annotation
+	 * takes precedence if both are present.
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-clientIdProperty"
+	 * >Ext.data.Model#clientIdProperty</a>
+	 * 
+	 * <p>
+	 * Defaults to null
+	 */
+	String clientIdProperty() default "";
 
 	/**
 	 * If true a reader config with root : 'records' (Ext JS 4) or rootProperty :
@@ -241,4 +264,15 @@ public @interface Model {
 	 */
 	boolean writeAllFields() default true;
 
+	/**
+	 * The id generator to use for this model.
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-identifier"
+	 * >Ext.data.Model#identifier</a>
+	 * 
+	 * <p>
+	 * Defaults to null
+	 */
+	String identifier() default "";
 }

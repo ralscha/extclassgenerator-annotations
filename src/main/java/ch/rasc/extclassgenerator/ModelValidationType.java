@@ -68,12 +68,10 @@ public enum ModelValidationType {
 			if (modelValidationAnnotation.exclusionOrInclusionList().length > 0) {
 				return true;
 			}
-			else {
-				ModelValidationParameter[] parameters = modelValidationAnnotation
-						.parameters();
-				return parameters != null && parameters.length == 1
-						&& parameters[0].name().equals("list");
-			}
+			ModelValidationParameter[] parameters = modelValidationAnnotation
+					.parameters();
+			return parameters != null && parameters.length == 1
+					&& parameters[0].name().equals("list");
 		}
 	},
 	EXCLUSION(true) {
@@ -82,12 +80,10 @@ public enum ModelValidationType {
 			if (modelValidationAnnotation.exclusionOrInclusionList().length > 0) {
 				return true;
 			}
-			else {
-				ModelValidationParameter[] parameters = modelValidationAnnotation
-						.parameters();
-				return parameters != null && parameters.length == 1
-						&& parameters[0].name().equals("list");
-			}
+			ModelValidationParameter[] parameters = modelValidationAnnotation
+					.parameters();
+			return parameters != null && parameters.length == 1
+					&& parameters[0].name().equals("list");
 		}
 	},
 	LENGTH(true) {

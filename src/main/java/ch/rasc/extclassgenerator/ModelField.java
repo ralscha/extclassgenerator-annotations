@@ -18,6 +18,7 @@ package ch.rasc.extclassgenerator;
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
+import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
@@ -31,6 +32,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
+@Repeatable(ModelFields.class)
 public @interface ModelField {
 	/**
 	 * Name of the field. Property '<a
@@ -127,6 +129,22 @@ public @interface ModelField {
 	 * Defaults to false
 	 */
 	boolean critical() default false;
+
+	/**
+	 * The field name or names within the Model on which the value of this field depends,
+	 * and from which a new value may be calculated. These values are the values used by
+	 * the {@link #convert()} method. If you do not have a {@link #convert()} method then
+	 * this config should not be specified. Before using this config you should consider
+	 * if using a {@link #calculate()} method instead of a {@link #convert()} method would
+	 * be simpler.
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-depends"
+	 * >Ext.data.field.FieldView#depends</a>
+	 * <p>
+	 * Defaults to null
+	 */
+	String[] depends() default {};
 
 	/**
 	 * Function which coerces string values in raw data into the field's type <br>

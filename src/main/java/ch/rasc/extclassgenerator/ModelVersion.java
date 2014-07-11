@@ -23,14 +23,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Container annotation that aggregates several {@link ModelField} annotations.
+ * Denotes a field or a get/is method as the model's version property. Alternative to
+ * {@link Model#versionProperty()}. If a class has both this annotation takes precedence
  */
-@Target(ElementType.TYPE)
+@Target({ ElementType.FIELD, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
-@Documented
 @Inherited
-public @interface ModelFields {
-
-	ModelField[] value();
-
+@Documented
+public @interface ModelVersion {
+	// nothing here
 }

@@ -23,14 +23,28 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Container annotation that aggregates several {@link ModelField} annotations.
+ * Denotes a field or a get/is method as the model's client id property. Alternative to
+ * {@link Model#clientIdProperty()}. If a class has both this annotation takes precedence
  */
-@Target(ElementType.TYPE)
+@Target({ ElementType.FIELD, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
-@Documented
 @Inherited
-public @interface ModelFields {
-
-	ModelField[] value();
-
+@Documented
+public @interface ModelClientId {
+	/**
+	 * If true the clientIdProperty is also added to the proxy's writer config
+	 *
+	 * <pre>
+	 *   proxy: {
+	 *     type: 'direct',
+	 *     writer: {
+	 *       type: 'json',
+	 *       clientIdProperty: 'clientId'
+	 *     }
+	 *   }
+	 * </pre>
+	 *
+	 * Default value is true.
+	 */
+	boolean configureWriter() default true;
 }
