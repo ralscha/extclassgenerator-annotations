@@ -26,6 +26,13 @@ import java.util.Date;
  */
 public enum ModelType {
 
+	AUTODETECT("") {
+		@Override
+		public boolean supports(Class<?> type) {
+			return false;
+		}
+	},
+
 	AUTO("auto") {
 		@Override
 		public boolean supports(Class<?> type) {

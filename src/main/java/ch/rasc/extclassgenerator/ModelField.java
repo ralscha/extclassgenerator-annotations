@@ -50,7 +50,7 @@ public @interface ModelField {
 	 * <p>
 	 * If not present the library tries to figure out the type.
 	 */
-	ModelType type() default ModelType.AUTO;
+	ModelType type() default ModelType.AUTODETECT;
 
 	/**
 	 * Type of the field. Property '<a
@@ -151,7 +151,7 @@ public @interface ModelField {
 	 * Typical use for a virtual field <br>
 	 * Property '<a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-convert" >
-	 * Ext.data.Field.convert</a>' in JS.
+	 * Ext.data.Field#convert</a>' in JS.
 	 * <p>
 	 */
 	String convert() default "";
@@ -164,9 +164,18 @@ public @interface ModelField {
 	 * 
 	 * See <a href=
 	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-calculate"
-	 * >Ext.data.Field.calculate</a>
+	 * >Ext.data.Field#calculate</a>
 	 */
 	String calculate() default "";
+
+	/**
+	 * Defines a relationship to another model.
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-reference"
+	 * >Ext.data.Field#reference</a>
+	 */
+	ReferenceConfig reference() default @ReferenceConfig;
 
 	/**
 	 * Constant for the value undefined. Can only be used for the property
