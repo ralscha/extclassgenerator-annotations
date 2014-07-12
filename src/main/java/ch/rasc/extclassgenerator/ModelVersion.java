@@ -23,10 +23,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Denotes a field or a get/is method as the model's version property. Alternative to
+ * Denotes a field as the model's version property. Alternative to
  * {@link Model#versionProperty()}. If a class has both this annotation takes precedence
  */
-@Target({ ElementType.FIELD, ElementType.METHOD })
+@Target({ ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
