@@ -93,9 +93,41 @@ public @interface ModelField {
 	 * in JS.<br>
 	 * <p>
 	 * Only used if type of field is {@link ModelType#INTEGER}, {@link ModelType#FLOAT},
-	 * {@link ModelType#STRING} or {@link ModelType#BOOLEAN}.
+	 * {@link ModelType#NUMBER}, {@link ModelType#STRING} or {@link ModelType#BOOLEAN}.
 	 */
 	boolean useNull() default false;
+
+	/**
+	 * Use when converting received data into a <code>integer</code>,
+	 * <code>float/number</code>, <code>boolean</code> or <code>string</code> type. If the
+	 * value cannot be parsed, null will be used if allowNull is true, otherwise a default
+	 * value for that type will be used (0 for integer and float/number, "" for string and
+	 * false for boolean)
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-allowNull"
+	 * >Ext.data.Field#allowNull</a>
+	 * <p>
+	 * Defaults to false
+	 * <p>
+	 * Only used if type of field is {@link ModelType#INTEGER}, {@link ModelType#FLOAT},
+	 * {@link ModelType#NUMBER}, {@link ModelType#STRING} or {@link ModelType#BOOLEAN}.
+	 * <p>
+	 * <strong>This is another name for {@link #useNull()}. Both properties behave exactly
+	 * the same. Use only one.</strong>
+	 */
+	boolean allowNull() default false;
+
+	/**
+	 * Used for validating a model.
+	 * <p>
+	 * Set <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-allowBlank"
+	 * >Ext.data.Field#allowBlank</a>
+	 * <p>
+	 * Defaults to true
+	 */
+	boolean allowBlank() default true;
 
 	/**
 	 * Typical use for a virtual field to extract field data from the model object <br>
@@ -167,6 +199,18 @@ public @interface ModelField {
 	 * >Ext.data.Field#calculate</a>
 	 */
 	String calculate() default "";
+
+	/**
+	 * true if the value of this field is unique amongst all instances. When used with a
+	 * reference this describes a "one-to-one" relationship
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-unique"
+	 * >Ext.data.Field#unique</a>
+	 * <p>
+	 * Defaults to false
+	 */
+	boolean unique() default false;
 
 	/**
 	 * Defines a relationship to another model.

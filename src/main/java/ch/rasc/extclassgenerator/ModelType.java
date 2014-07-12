@@ -58,6 +58,14 @@ public enum ModelType {
 					|| type.equals(Double.TYPE);
 		}
 	},
+	NUMBER("number") { // another name for float
+		@Override
+		public boolean supports(Class<?> type) {
+			return type.equals(Float.class) || type.equals(Double.class)
+					|| type.equals(BigDecimal.class) || type.equals(Float.TYPE)
+					|| type.equals(Double.TYPE);
+		}
+	},
 	STRING("string") {
 		@Override
 		public boolean supports(Class<?> type) {
