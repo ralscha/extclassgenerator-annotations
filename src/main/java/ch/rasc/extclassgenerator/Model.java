@@ -39,6 +39,13 @@ public @interface Model {
 	String value() default "";
 
 	/**
+	 * "Superclass" of this model.
+	 * <p>
+	 * Defaults to "Ext.data.Model"
+	 */
+	String extend() default "Ext.data.Model";
+
+	/**
 	 * Name of the id property. See <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model-cfg-idProperty"
 	 * >Ext.data.Model#idProperty</a>. This also sets the <a href=
