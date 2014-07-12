@@ -30,6 +30,16 @@ import java.lang.annotation.Target;
 @Inherited
 @Documented
 public @interface Model {
+
+	/**
+	 * If true the model generator tries to auto-detect the type of a field when no
+	 * {@link ModelField} annotation is present.
+	 * <p>
+	 * If false every field that is not annotated with {@link ModelField} or contains an
+	 * empty {@link ModelField#type()} attribute is set to the type {@link ModelType#AUTO}
+	 */
+	boolean autodetectTypes() default true;
+
 	/**
 	 * "Classname" of the model. See <a
 	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model" >Ext.data.Model</a>.

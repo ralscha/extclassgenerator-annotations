@@ -48,9 +48,11 @@ public @interface ModelField {
 	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Field-cfg-type" >type</a>'
 	 * in JS.
 	 * <p>
-	 * If not present the library tries to figure out the type.
+	 * If not present and {@link Model#autodetectTypes()} is true the generator tries to
+	 * figure out the type. If not present and {@link Model#autodetectTypes()} is false
+	 * the type is set to 'auto'.
 	 */
-	ModelType type() default ModelType.AUTODETECT;
+	ModelType type() default ModelType.NOT_SPECIFIED;
 
 	/**
 	 * Type of the field. Property '<a

@@ -26,7 +26,7 @@ import java.util.Date;
  */
 public enum ModelType {
 
-	AUTODETECT("") {
+	NOT_SPECIFIED("") {
 		@Override
 		public boolean supports(Class<?> type) {
 			return false;
