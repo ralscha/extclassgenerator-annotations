@@ -63,7 +63,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>2.3</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -102,7 +102,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.4</version>
 				<configuration>
 					<reportPlugins>
 						<plugin>
@@ -119,12 +119,13 @@
 									<link>http://docs.spring.io/spring/docs/3.2.x/javadoc-api/</link>
 									<link>http://docs.oracle.com/javase/6/docs/api/</link>
 								</links>
+								<additionalparam>-Xdoclint:none</additionalparam>
 							</configuration>
 						</plugin>
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-jxr-plugin</artifactId>
-							<version>2.3</version>
+							<version>2.4</version>
 						</plugin>
 
 					</reportPlugins>
@@ -139,9 +140,9 @@
 			</plugin>
 
 			<plugin>
-				<groupId>com.mycila.maven-license-plugin</groupId>
-				<artifactId>maven-license-plugin</artifactId>
-				<version>1.10.b1</version>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>2.6</version>
 				<configuration>
 					<header>${basedir}/src/main/config/header.txt</header>
 					<properties>
