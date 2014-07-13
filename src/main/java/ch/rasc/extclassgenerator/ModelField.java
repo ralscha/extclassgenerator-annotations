@@ -195,7 +195,7 @@ public @interface ModelField {
 	 * has access to the record data and should return the value of the calculated field.
 	 * When provided in this way, the depends config is automatically determined by
 	 * parsing the calculate function.
-	 * 
+	 *
 	 * See <a href=
 	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-calculate"
 	 * >Ext.data.Field#calculate</a>

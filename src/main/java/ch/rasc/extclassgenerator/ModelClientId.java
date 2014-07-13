@@ -38,7 +38,6 @@ public @interface ModelClientId {
 	 *   proxy: {
 	 *     type: 'direct',
 	 *     writer: {
-	 *       type: 'json',
 	 *       clientIdProperty: 'clientId'
 	 *     }
 	 *   }
