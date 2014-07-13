@@ -80,7 +80,7 @@ public @interface Model {
 	 * See <a href=
 	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-versionProperty"
 	 * >Ext.data.Model#versionProperty</a>
-	 * 
+	 *
 	 * <p>
 	 * Defaults to null
 	 */
@@ -97,7 +97,7 @@ public @interface Model {
 	 * See <a href=
 	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-clientIdProperty"
 	 * >Ext.data.Model#clientIdProperty</a>
-	 * 
+	 *
 	 * <p>
 	 * Defaults to null
 	 */
@@ -189,21 +189,44 @@ public @interface Model {
 	String messageProperty() default "";
 
 	/**
-	 * If set add a writer property to the proxy.
+	 * If set adds a writer config to the proxy object.
 	 *
 	 * <pre>
 	 *   proxy: {
 	 *     type: 'direct',
-	 *     writer: 'mywriter'
+	 *     writer: {
+	 *       type: 'mywriter'
+	 *     }
 	 *   }
 	 * </pre>
 	 *
 	 * See <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Proxy-cfg-writer"
 	 * >Ext.data.proxy.Proxy#writer</a>
-	 *
+	 * <p>
+	 * Defaults to "json"
 	 */
-	String writer() default "";
+	String writer() default "json";
+
+	/**
+	 * If set adds a reader config to the proxy object.
+	 *
+	 * <pre>
+	 *   proxy: {
+	 *     type: 'direct',
+	 *     reader: {
+	 *       type: 'myreader'
+	 *     }
+	 *   }
+	 * </pre>
+	 *
+	 * See <a href=
+	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.proxy.Proxy-cfg-reader"
+	 * >Ext.data.proxy.Proxy#reader</a>
+	 * <p>
+	 * Defaults to "json"
+	 */
+	String reader() default "json";
 
 	/**
 	 * If set add to reader
@@ -213,7 +236,7 @@ public @interface Model {
 	 *   successProperty : 'success'
 	 * }
 	 * </pre>
-	 * 
+	 *
 	 * See <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-successProperty"
 	 * >Ext.data.reader.Reader#successProperty</a>
@@ -230,7 +253,7 @@ public @interface Model {
 	 *   totalProperty : 'total'
 	 * }
 	 * </pre>
-	 * 
+	 *
 	 * See <a href=
 	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-totalProperty"
 	 * >Ext.data.reader.Reader#totalProperty</a>
@@ -248,7 +271,7 @@ public @interface Model {
 	 *   rootProperty : 'rootProperty'
 	 * }
 	 * </pre>
-	 * 
+	 *
 	 * If {@link #paging()} and {@link #rootProperty()} are present
 	 * {@link #rootProperty()} has precedence.
 	 * <p>
@@ -260,19 +283,17 @@ public @interface Model {
 
 	/**
 	 * If specified the generator adds a writer config object to the proxy with
-	 * writeAllFields. If {@link #writer()} and {@link #writeAllFields()} are specified
-	 * the {@link #writer()} option has precedence.
+	 * writeAllFields.
 	 *
 	 * <pre>
 	 *   proxy: {
 	 *     type: 'direct',
 	 *     writer: {
-	 *       type: 'json',
 	 *       writeAllFields: true
 	 *     }
 	 *   }
 	 * </pre>
-	 * 
+	 *
 	 * See <a href=
 	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.writer.Writer-cfg-writeAllFields"
 	 * >Ext.data.writer.WriterView#writeAllFields</a>
@@ -287,7 +308,7 @@ public @interface Model {
 	 * See <a href=
 	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-identifier"
 	 * >Ext.data.Model#identifier</a>
-	 * 
+	 *
 	 * <p>
 	 * Defaults to null
 	 */
