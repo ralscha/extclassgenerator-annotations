@@ -27,7 +27,7 @@ import java.lang.annotation.Target;
  * value for the {@link ModelField#reference()} attribute
  * <p>
  * See <a href=
- * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-reference"
+ * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-reference"
  * >Ext.data.field.Field#reference</a> for more information
  */
 @Target({ ElementType.FIELD, ElementType.METHOD, ElementType.TYPE })

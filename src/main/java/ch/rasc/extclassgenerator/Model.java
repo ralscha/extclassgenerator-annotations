@@ -78,7 +78,7 @@ public @interface Model {
 	 * precedence if both are present.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-versionProperty"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-versionProperty"
 	 * >Ext.data.Model#versionProperty</a>
 	 *
 	 * <p>
@@ -95,7 +95,7 @@ public @interface Model {
 	 * takes precedence if both are present.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-clientIdProperty"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-clientIdProperty"
 	 * >Ext.data.Model#clientIdProperty</a>
 	 *
 	 * <p>
@@ -221,7 +221,7 @@ public @interface Model {
 	 * </pre>
 	 *
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.proxy.Proxy-cfg-reader"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.proxy.Proxy-cfg-reader"
 	 * >Ext.data.proxy.Proxy#reader</a>
 	 * <p>
 	 * Defaults to "json"
@@ -295,7 +295,7 @@ public @interface Model {
 	 * </pre>
 	 *
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.writer.Writer-cfg-writeAllFields"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.writer.Writer-cfg-writeAllFields"
 	 * >Ext.data.writer.WriterView#writeAllFields</a>
 	 * <p>
 	 * Defaults to true
@@ -306,7 +306,7 @@ public @interface Model {
 	 * The id generator to use for this model.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-identifier"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-identifier"
 	 * >Ext.data.Model#identifier</a>
 	 *
 	 * <p>

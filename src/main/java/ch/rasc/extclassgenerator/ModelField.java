@@ -107,7 +107,7 @@ public @interface ModelField {
 	 * false for boolean)
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-allowNull"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-allowNull"
 	 * >Ext.data.Field#allowNull</a>
 	 * <p>
 	 * Defaults to false
@@ -124,7 +124,7 @@ public @interface ModelField {
 	 * Used for validating a model.
 	 * <p>
 	 * Set <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-allowBlank"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-allowBlank"
 	 * >Ext.data.Field#allowBlank</a>
 	 * <p>
 	 * Defaults to true
@@ -157,7 +157,7 @@ public @interface ModelField {
 	 * not changed.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-critical"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-critical"
 	 * >Ext.data.field.FieldView#critical</a>
 	 * <p>
 	 * Defaults to false
@@ -173,7 +173,7 @@ public @interface ModelField {
 	 * be simpler.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-depends"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-depends"
 	 * >Ext.data.field.FieldView#depends</a>
 	 * <p>
 	 * Defaults to null
@@ -197,7 +197,7 @@ public @interface ModelField {
 	 * parsing the calculate function.
 	 *
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-calculate"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-calculate"
 	 * >Ext.data.Field#calculate</a>
 	 */
 	String calculate() default "";
@@ -207,7 +207,7 @@ public @interface ModelField {
 	 * reference this describes a "one-to-one" relationship
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-unique"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-unique"
 	 * >Ext.data.Field#unique</a>
 	 * <p>
 	 * Defaults to false
@@ -218,7 +218,7 @@ public @interface ModelField {
 	 * Defines a relationship to another model.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/ext/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-reference"
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.field.Field-cfg-reference"
 	 * >Ext.data.Field#reference</a>
 	 */
 	ReferenceConfig reference() default @ReferenceConfig;
