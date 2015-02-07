@@ -152,7 +152,7 @@ public enum ModelValidationType {
 	}
 
 	public boolean isBuiltin() {
-		return builtin;
+		return this.builtin;
 	}
 
 	public abstract boolean isValid(ModelValidation modelValidationAnnotation);

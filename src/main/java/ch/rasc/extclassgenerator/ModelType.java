@@ -104,7 +104,7 @@ public enum ModelType {
 	 * @return the name of the type for JS code
 	 */
 	public String getJsName() {
-		return jsName;
+		return this.jsName;
 	}
 
 	/**
