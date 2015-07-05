@@ -41,8 +41,9 @@ public @interface Model {
 	boolean autodetectTypes() default true;
 
 	/**
-	 * "Classname" of the model. See <a
-	 * href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model" >Ext.data.Model</a>.
+	 * "Classname" of the model. See
+	 * <a href="http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model" >Ext.data.Model
+	 * </a>.
 	 * <p>
 	 * If not present full qualified name of the class is used.
 	 */
@@ -56,11 +57,11 @@ public @interface Model {
 	String extend() default "Ext.data.Model";
 
 	/**
-	 * Name of the id property. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model-cfg-idProperty"
-	 * >Ext.data.Model#idProperty</a>. This also sets the <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Server-cfg-idParam"
-	 * >idParam</a> property on the proxy.
+	 * Name of the id property. See
+	 * <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.Model-cfg-idProperty" >
+	 * Ext.data.Model#idProperty</a>. This also sets the <a href=
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Server-cfg-idParam" >
+	 * idParam</a> property on the proxy.
 	 * <p>
 	 * If not present default value of 'id' is used.
 	 * <p>
@@ -138,37 +139,37 @@ public @interface Model {
 
 	/**
 	 * Specifies the read method. This is a ExtDirect reference in the form
-	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
-	 * >Ext.data.proxy.Direct#api</a>.
+	 * action.methodName. See
+	 * <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api" >
+	 * Ext.data.proxy.Direct#api</a>.
 	 * <p>
 	 * If only the readMethod is specified the generator will write the property <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-directFn"
-	 * >directFn</a> instead.
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-directFn" >
+	 * directFn</a> instead.
 	 */
 	String readMethod() default "";
 
 	/**
 	 * Specifies the create method. This is a ExtDirect reference in the form
-	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
-	 * >Ext.data.proxy.Direct#api</a>.
+	 * action.methodName. See
+	 * <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api" >
+	 * Ext.data.proxy.Direct#api</a>.
 	 */
 	String createMethod() default "";
 
 	/**
 	 * Specifies the update method. This is a ExtDirect reference in the form
-	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
-	 * >Ext.data.proxy.Direct#api</a>.
+	 * action.methodName. See
+	 * <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api" >
+	 * Ext.data.proxy.Direct#api</a>.
 	 */
 	String updateMethod() default "";
 
 	/**
 	 * Specifies the destroy method. This is a ExtDirect reference in the form
-	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api"
-	 * >Ext.data.proxy.Direct#api</a>.
+	 * action.methodName. See
+	 * <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Direct-cfg-api" >
+	 * Ext.data.proxy.Direct#api</a>.
 	 */
 	String destroyMethod() default "";
 
@@ -200,8 +201,8 @@ public @interface Model {
 	 *   }
 	 * </pre>
 	 *
-	 * See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Proxy-cfg-writer"
+	 * See
+	 * <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.proxy.Proxy-cfg-writer"
 	 * >Ext.data.proxy.Proxy#writer</a>
 	 * <p>
 	 * Defaults to "json"
@@ -275,8 +276,8 @@ public @interface Model {
 	 * If {@link #paging()} and {@link #rootProperty()} are present
 	 * {@link #rootProperty()} has precedence.
 	 * <p>
-	 * See <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-root"
+	 * See
+	 * <a href= "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.reader.Reader-cfg-root"
 	 * >Ext.data.reader.Reader#root</a>
 	 */
 	String rootProperty() default "";
@@ -306,8 +307,8 @@ public @interface Model {
 	 * The id generator to use for this model.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-identifier"
-	 * >Ext.data.Model#identifier</a>
+	 * "http://docs.sencha.com/extjs/5.0.0/apidocs/#!/api/Ext.data.Model-cfg-identifier" >
+	 * Ext.data.Model#identifier</a>
 	 *
 	 * <p>
 	 * Defaults to null

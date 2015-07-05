@@ -91,10 +91,9 @@ public enum ModelValidationType {
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			ModelValidationParameter[] parameters = modelValidationAnnotation
 					.parameters();
-			if (parameters != null
-					&& (parameters.length == 1 || parameters.length == 2)
-					&& (parameterExists(parameters, "min") || parameterExists(parameters,
-							"max"))) {
+			if (parameters != null && (parameters.length == 1 || parameters.length == 2)
+					&& (parameterExists(parameters, "min")
+							|| parameterExists(parameters, "max"))) {
 
 				if (parameters.length == 1) {
 					return parameters[0].value().matches("\\d+");
@@ -129,10 +128,9 @@ public enum ModelValidationType {
 		public boolean isValid(ModelValidation modelValidationAnnotation) {
 			ModelValidationParameter[] parameters = modelValidationAnnotation
 					.parameters();
-			if (parameters != null
-					&& (parameters.length == 1 || parameters.length == 2)
-					&& (parameterExists(parameters, "min") || parameterExists(parameters,
-							"max"))) {
+			if (parameters != null && (parameters.length == 1 || parameters.length == 2)
+					&& (parameterExists(parameters, "min")
+							|| parameterExists(parameters, "max"))) {
 
 				if (parameters.length == 1) {
 					return parameters[0].value().matches("\\d+(\\.\\d+)?");

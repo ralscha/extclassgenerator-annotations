@@ -36,8 +36,8 @@ public @interface ModelAssociation {
 	 * The type of the association.
 	 * <p>
 	 * Corresponds to the <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.association.HasMany-cfg-type"
-	 * >type</a> config property.
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.association.HasMany-cfg-type" >
+	 * type</a> config property.
 	 */
 	ModelAssociationType value();
 
@@ -86,8 +86,8 @@ public @interface ModelAssociation {
 	 * If not specified, the name of the field is used.
 	 * <p>
 	 * Corresponds to the <a href=
-	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.association.HasMany-cfg-name"
-	 * >name</a> config property.
+	 * "http://docs.sencha.com/ext-js/4-2/#!/api/Ext.data.association.HasMany-cfg-name" >
+	 * name</a> config property.
 	 * <p>
 	 * Only {@link ModelAssociationType#HAS_MANY} association support this property.
 	 */

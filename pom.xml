@@ -146,7 +146,7 @@
 				<configuration>
 					<additionalparam>-Xdoclint:none</additionalparam>
 				</configuration>
-			</plugin>			
+			</plugin>
 			
 			<plugin>
 				<groupId>com.mycila</groupId>
