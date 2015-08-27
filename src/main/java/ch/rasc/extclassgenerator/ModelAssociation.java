@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2014 Ralph Schaer <ralphschaer@gmail.com>
+ * Copyright 2013-2015 Ralph Schaer <ralphschaer@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -56,7 +56,7 @@ public @interface ModelAssociation {
 	 * qualified class name of the class or the string from {@link Model#value()} if
 	 * present on the class.
 	 */
-	Class<?> model() default Object.class;
+	Class<?>model() default Object.class;
 
 	/**
 	 * True to automatically load the related store from a remote source when
