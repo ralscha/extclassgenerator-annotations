@@ -35,12 +35,33 @@ import java.lang.annotation.Target;
 @Documented
 public @interface PartialDataOptions {
 
+	/**
+	 * True to include associated data
+	 * <p>
+	 * Defaults to false
+	 */
 	boolean associated() default false;
 
+	/**
+	 * True to only include fields that have been modified
+	 * <p>
+	 * Defaults to true
+	 */
 	boolean changes() default true;
 
+	/**
+	 * True to include fields set as critical. This is only meaningful when changes is
+	 * true
+	 * <p>
+	 * Defaults to true
+	 */
 	boolean critical() default true;
 
+	/**
+	 * Pass true to only return persistent fields
+	 * <p>
+	 * Defaults to false
+	 */
 	boolean persist() default false;
 
 }
