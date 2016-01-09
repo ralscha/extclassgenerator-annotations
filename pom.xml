@@ -8,7 +8,7 @@
 	</parent>
 
 	<prerequisites>
-		<maven>3.0.0</maven>
+		<maven>3.3.9</maven>
 	</prerequisites>
 
 	<groupId>ch.rasc</groupId>
@@ -78,7 +78,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>2.6.1</version>
+				<version>3.0.0</version>
 			</plugin>
 
 			<plugin>
@@ -157,7 +157,7 @@
 					<properties>
 						<owner>Ralph Schaer</owner>
 						<year>${project.inceptionYear}</year>
-						<currentYear>2015</currentYear>
+						<currentYear>2016</currentYear>
 						<email>ralphschaer@gmail.com</email>
 					</properties>
 					<excludes>
