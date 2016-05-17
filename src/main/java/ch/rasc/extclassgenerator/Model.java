@@ -325,8 +325,7 @@ public @interface Model {
 	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.writer.Writer-cfg-allDataOptions"
 	 * > Ext.data.Model#allDataOptions</a>
 	 */
-	AllDataOptions allDataOptions() default @AllDataOptions
-	;
+	AllDataOptions allDataOptions() default @AllDataOptions;
 
 	/**
 	 * Configuration for the writer
@@ -338,7 +337,14 @@ public @interface Model {
 	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.writer.Writer-cfg-partialDataOptions"
 	 * > Ext.data.Model#partialDataOptions</a>
 	 */
-	PartialDataOptions partialDataOptions() default @PartialDataOptions
-	;
+	PartialDataOptions partialDataOptions() default @PartialDataOptions;
+
+	/**
+	 * Configures One-to-Many associations without foreign keys
+	 * <p>
+	 * See <a href=
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.Model-cfg-hasMany">Ext.data.Model-cfg-hasMany</a>
+	 */
+	String[] hasMany() default "";
 
 }
