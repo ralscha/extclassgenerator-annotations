@@ -42,7 +42,7 @@ public @interface Model {
 
 	/**
 	 * "Classname" of the model. See
-	 * <a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.Model" >Ext
+	 * <a href="http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.Model" >Ext
 	 * .data.Model </a>.
 	 * <p>
 	 * If not present full qualified name of the class is used.
@@ -58,9 +58,9 @@ public @interface Model {
 
 	/**
 	 * Name of the id property. See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.Model-cfg-idProperty"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.Model-cfg-idProperty"
 	 * > Ext.data.Model#idProperty</a>. This also sets the <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.Server-cfg-idParam"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.proxy.Server-cfg-idParam"
 	 * > idParam</a> property on the proxy.
 	 * <p>
 	 * If not present default value of 'id' is used.
@@ -79,7 +79,7 @@ public @interface Model {
 	 * precedence if both are present.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.Model-cfg-versionProperty"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.Model-cfg-versionProperty"
 	 * >Ext.data.Model#versionProperty</a>
 	 *
 	 * <p>
@@ -96,7 +96,7 @@ public @interface Model {
 	 * takes precedence if both are present.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.Model-cfg-clientIdProperty"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.Model-cfg-clientIdProperty"
 	 * >Ext.data.Model#clientIdProperty</a>
 	 *
 	 * <p>
@@ -140,11 +140,11 @@ public @interface Model {
 	/**
 	 * Specifies the read method. This is a ExtDirect reference in the form
 	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.Direct-cfg-api"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.proxy.Direct-cfg-api"
 	 * > Ext.data.proxy.Direct#api</a>.
 	 * <p>
 	 * If only the readMethod is specified the generator will write the property <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.Direct-cfg-directFn"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.proxy.Direct-cfg-directFn"
 	 * > directFn</a> instead.
 	 */
 	String readMethod() default "";
@@ -152,7 +152,7 @@ public @interface Model {
 	/**
 	 * Specifies the create method. This is a ExtDirect reference in the form
 	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.Direct-cfg-api"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.proxy.Direct-cfg-api"
 	 * > Ext.data.proxy.Direct#api</a>.
 	 */
 	String createMethod() default "";
@@ -160,7 +160,7 @@ public @interface Model {
 	/**
 	 * Specifies the update method. This is a ExtDirect reference in the form
 	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.Direct-cfg-api"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.proxy.Direct-cfg-api"
 	 * > Ext.data.proxy.Direct#api</a>.
 	 */
 	String updateMethod() default "";
@@ -168,7 +168,7 @@ public @interface Model {
 	/**
 	 * Specifies the destroy method. This is a ExtDirect reference in the form
 	 * action.methodName. See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.Direct-cfg-api"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.proxy.Direct-cfg-api"
 	 * > Ext.data.proxy.Direct#api</a>.
 	 */
 	String destroyMethod() default "";
@@ -183,7 +183,7 @@ public @interface Model {
 	 * </pre>
 	 *
 	 * It is useful to add a customized message in case of error See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.reader.Reader-cfg-messageProperty"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.reader.Reader-cfg-messageProperty"
 	 * >Ext.data.reader.Reader#messageProperty</a>
 	 *
 	 */
@@ -202,7 +202,7 @@ public @interface Model {
 	 * </pre>
 	 *
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.Proxy-cfg-writer"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.proxy.Proxy-cfg-writer"
 	 * >Ext.data.proxy.Proxy#writer</a>
 	 * <p>
 	 * Defaults to "json"
@@ -222,7 +222,7 @@ public @interface Model {
 	 * </pre>
 	 *
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.Proxy-cfg-reader"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.proxy.Proxy-cfg-reader"
 	 * >Ext.data.proxy.Proxy#reader</a>
 	 * <p>
 	 * Defaults to "json"
@@ -239,7 +239,7 @@ public @interface Model {
 	 * </pre>
 	 *
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.reader.Reader-cfg-successProperty"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.reader.Reader-cfg-successProperty"
 	 * >Ext.data.reader.Reader#successProperty</a>
 	 * <p>
 	 * If not present default value 'success' is used.
@@ -256,7 +256,7 @@ public @interface Model {
 	 * </pre>
 	 *
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.reader.Reader-cfg-totalProperty"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.reader.Reader-cfg-totalProperty"
 	 * >Ext.data.reader.Reader#totalProperty</a>
 	 * <p>
 	 * If not present default value 'total' is used.
@@ -277,7 +277,7 @@ public @interface Model {
 	 * {@link #rootProperty()} has precedence.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.reader.Reader-cfg-rootProperty"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.reader.Reader-cfg-rootProperty"
 	 * >Ext.data.reader.Reader#rootProperty</a>
 	 */
 	String rootProperty() default "";
@@ -296,7 +296,7 @@ public @interface Model {
 	 * </pre>
 	 *
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.writer.Writer-cfg-writeAllFields"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.writer.Writer-cfg-writeAllFields"
 	 * >Ext.data.writer.WriterView#writeAllFields</a>
 	 * <p>
 	 * Defaults to true
@@ -307,7 +307,7 @@ public @interface Model {
 	 * The id generator to use for this model.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.Model-cfg-identifier"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.Model-cfg-identifier"
 	 * > Ext.data.Model#identifier</a>
 	 *
 	 * <p>
@@ -322,7 +322,7 @@ public @interface Model {
 	 * Ext.data.Model.phantom records or when writeAllFields is set to true.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.writer.Writer-cfg-allDataOptions"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.writer.Writer-cfg-allDataOptions"
 	 * > Ext.data.Model#allDataOptions</a>
 	 */
 	AllDataOptions allDataOptions() default @AllDataOptions;
@@ -334,7 +334,7 @@ public @interface Model {
 	 * Ext.data.Model.phantom records or when writeAllFields is set to false.
 	 * <p>
 	 * See <a href=
-	 * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.writer.Writer-cfg-partialDataOptions"
+	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.writer.Writer-cfg-partialDataOptions"
 	 * > Ext.data.Model#partialDataOptions</a>
 	 */
 	PartialDataOptions partialDataOptions() default @PartialDataOptions;

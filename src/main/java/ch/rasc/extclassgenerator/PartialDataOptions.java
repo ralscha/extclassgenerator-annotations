@@ -26,7 +26,7 @@ import java.lang.annotation.Target;
  * This annotation is the value for the {@link Model#partialDataOptions()} attribute
  * <p>
  * See <a href=
- * "http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.writer.Writer-cfg-partialDataOptions"
+ * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.writer.Writer-cfg-partialDataOptions"
  * >Ext.data.writer.Writer#partialDataOptions</a> for more information
  */
 @Target({ ElementType.FIELD, ElementType.METHOD, ElementType.TYPE })
