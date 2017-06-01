@@ -7,9 +7,6 @@
 		<version>9</version>
 	</parent>
 
-	<prerequisites>
-		<maven>3.3.9</maven>
-	</prerequisites>
 
 	<groupId>ch.rasc</groupId>
 	<artifactId>extclassgenerator-annotations</artifactId>
