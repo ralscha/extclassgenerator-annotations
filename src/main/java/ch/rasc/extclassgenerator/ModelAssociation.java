@@ -56,7 +56,7 @@ public @interface ModelAssociation {
 	 * qualified class name of the class or the string from {@link Model#value()} if
 	 * present on the class.
 	 */
-	Class<?>model() default Object.class;
+	Class<?> model() default Object.class;
 
 	/**
 	 * True to automatically load the related store from a remote source when

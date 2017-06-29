@@ -222,8 +222,7 @@ public @interface ModelField {
 	 * "http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.data.field.Field-cfg-reference"
 	 * >Ext.data.Field#reference</a>
 	 */
-	ReferenceConfig reference() default @ReferenceConfig
-	;
+	ReferenceConfig reference() default @ReferenceConfig;
 
 	/**
 	 * Constant for the value undefined. Can only be used for the property
