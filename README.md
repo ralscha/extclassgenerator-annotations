@@ -1,4 +1,4 @@
-##Ext Class Generator Annotations
+## Ext Class Generator Annotations
 
 [![Build Status](https://api.travis-ci.org/ralscha/extclassgenerator-annotations.png)](https://travis-ci.org/ralscha/extclassgenerator-annotations)
 
