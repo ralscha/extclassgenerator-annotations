@@ -165,7 +165,8 @@
 						<exclude>**/.gitignore</exclude>
 						<exclude>.travis.yml</exclude>
 						<exclude>.mvn/**/*</exclude>
-						<exclude>mvnw.cmd</exclude>						
+						<exclude>mvnw.cmd</exclude>
+                        <exclude>.editorconfig</exclude>						
 					</excludes>
 					<strictCheck>true</strictCheck>
 				</configuration>
